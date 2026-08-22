@@ -1,0 +1,87 @@
+.dialog-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background: rgba(28, 36, 31, 0.4);
+}
+
+.dialog-card {
+  width: min(460px, 100%);
+  background: var(--surface);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  box-shadow: var(--shadow);
+}
+
+.dialog-card h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.dialog-card > p {
+  margin: 0;
+  font-size: 14px;
+  color: var(--text);
+}
+
+.dialog-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.dialog-field span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.dialog-field input,
+.dialog-field textarea {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text-h);
+  background: #fff;
+}
+
+.dialog-size {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.dialog-check {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-h);
+}
+
+.dialog-error {
+  margin: 0;
+  color: var(--danger);
+  font-size: 13px;
+}
+
+.dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.dialog-actions .primary-btn,
+.dialog-actions .ghost-btn {
+  height: 40px;
+  padding: 0 14px;
+  width: auto;
+}

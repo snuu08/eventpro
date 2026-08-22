@@ -1,0 +1,146 @@
+.booth-editor {
+  width: min(380px, 100%);
+  flex: 0 0 auto;
+  overflow: auto;
+  padding: 16px 16px 20px;
+  border-left: 1px solid var(--border);
+  background: var(--surface);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.booth-editor-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.booth-editor-head h2 {
+  margin: 0;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.booth-question {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.booth-thread {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-height: 180px;
+  overflow: auto;
+}
+
+.booth-thread-empty,
+.booth-fields-lead,
+.booth-review,
+.booth-error {
+  margin: 0;
+  font-size: 13px;
+  color: var(--text);
+}
+
+.booth-error,
+.booth-review {
+  color: var(--danger);
+}
+
+.booth-msg {
+  margin: 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+.booth-msg.is-user {
+  background: var(--accent-bg);
+  color: var(--text-h);
+}
+
+.booth-msg.is-assistant {
+  background: #fff;
+  border: 1px solid var(--border);
+}
+
+.booth-chat {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.booth-chat textarea,
+.booth-field input,
+.booth-field select,
+.booth-staff input {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 12px;
+  font: inherit;
+  color: var(--text-h);
+  background: #fff;
+}
+
+.booth-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border);
+}
+
+.booth-fields h3 {
+  margin: 0;
+  font-size: 15px;
+}
+
+.booth-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.booth-field span {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--text-h);
+}
+
+.booth-field i {
+  font-style: normal;
+  font-weight: 600;
+  color: var(--text);
+  margin-left: 6px;
+}
+
+.booth-staff {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.booth-check {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.booth-editor .primary-btn {
+  height: 42px;
+}
+
+.booth-editor .primary-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
