@@ -1,0 +1,2 @@
+export const PUBLIC_ENV_NAMES = ["VITE_GOOGLE_MAPS_API_KEY"] as const;
+export const SERVER_ENV_NAMES = ["ANTHROPIC_API_KEY", "GOOGLE_PLACES_API_KEY"] as const;

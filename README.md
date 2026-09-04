@@ -1,32 +1,32 @@
-# React + TypeScript + Vite
+# 행사구성 LAB
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+장소를 고정하고 부스 배치와 방문객 흐름을 비교하는 웹앱입니다.
 
-Currently, two official plugins are available:
+이 결과는 배치안 비교를 위한 추정치이며 법정 안전검토를 대체하지 않습니다.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+데이터는 이 기기 IndexedDB(`event-lab`)에 저장됩니다. 비밀번호 원문은 저장하지 않습니다.
 
-## React Compiler
+## 실행
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## 검사
+
+```bash
+npm run lint
+npm run typecheck
+npm test
+npm run build
+npm run test:e2e
+```
+
+## 환경 변수
+
+`.env.example`의 이름만 사용합니다. 값은 커밋하지 않습니다.
+
+- `VITE_GOOGLE_MAPS_API_KEY` — Google Maps JS (없으면 도면 이미지 업로드)
+- `GOOGLE_PLACES_API_KEY` — 서버 `/api/places/search` 전용. 클라이언트 번들에 넣지 않음
+- `ANTHROPIC_API_KEY` — 서버 전용. 클라이언트 번들에 넣지 않음

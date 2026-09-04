@@ -1,0 +1,28 @@
+export const MVP_ACCEPTANCE = [
+  { id: "create-five-fields", label: "첫 화면에는 행사 제목, 편집 비밀번호, 예상 참여 인원, 부스 개수, 행사 목적만 있다." },
+  { id: "no-date-budget-auth", label: "날짜, 예산, 회원가입, 소셜 로그인이 없다." },
+  { id: "map-preview-before-lock", label: "지도 고정 전에 최종 표시 범위를 정확히 미리 볼 수 있다." },
+  { id: "map-lock-immutable", label: "지도 고정 후 지리적 위치·줌·지도 유형이 바뀌지 않는다." },
+  { id: "workspace-zoom-isolated", label: "작업 화면을 확대·축소해도 저장된 지도 범위와 요소 좌표가 바뀌지 않는다." },
+  { id: "resize-preserves-venue", label: "창 크기를 바꿔도 행사 영역과 출입구가 같은 장소에 남는다." },
+  { id: "access-required", label: "최소 1개의 입구와 최소 1개의 출구 없이는 배치 단계로 갈 수 없다." },
+  { id: "booth-card-count", label: "부스 수와 프로그램 카드 수가 항상 일치한다." },
+  { id: "no-furniture", label: "테이블·의자 기능이나 추천이 없다." },
+  { id: "ai-per-item-accept", label: "프로그램 설명으로 운영조건을 제안받되 사용자가 개별 수락한다." },
+  { id: "works-without-ai", label: "AI가 없어도 기본 분석과 나머지 핵심 기능이 작동한다." },
+  { id: "layout-patterns", label: "사용자 지정·일자형·마주보기형·U자형·아일랜드형이 있다." },
+  { id: "abc-distinct", label: "A·B·C 세 배치안이 서로 다른 목표로 생성된다." },
+  { id: "show-other-tradeoffs", label: "한 안을 선택한 뒤에도 다른 안이 더 유리한 조건을 보여준다." },
+  { id: "manual-after-auto", label: "사용자 지정에서는 프로그램을 직접 놓고, 일자형 등은 자동안을 고른 뒤 미세 조정한다." },
+  { id: "agents-move", label: "방문객이 입구에서 생성되어 프로그램에 머물고 출구로 실제 이동한다." },
+  { id: "playback-controls", label: "재생, 일시정지, 초기화, 속도 조절이 실제 엔진 상태와 연결된다." },
+  { id: "three-scenarios", label: "일반, 피크, 비상 퇴장 시나리오가 다르게 작동한다." },
+  { id: "heatmap-from-accumulation", label: "열지도, 대기열, 병목이 실제 누적 계산에서 나온다." },
+  { id: "numbers-are-estimates", label: "모든 결과 수치는 추정값으로 표시된다." },
+  { id: "not-legal-safety", label: "결과가 공인 안전검토를 대체하지 않는다는 고지가 있다." },
+  { id: "json-export-import-copy", label: "프로젝트를 JSON으로 내보내고 새 복사본으로 불러올 수 있다." },
+  { id: "no-secrets-in-bundle", label: "비밀번호 원문과 API 키가 저장·내보내기·클라이언트 번들에 없다." },
+  { id: "quality-gates", label: "핵심 E2E, 테스트, 타입 검사, 빌드가 통과한다." },
+] as const;
+
+export type AcceptanceId = (typeof MVP_ACCEPTANCE)[number]["id"];
